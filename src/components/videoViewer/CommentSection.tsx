@@ -14,8 +14,10 @@ import {COMMENTS} from '../../constants';
 import CommentItem from './CommentItem';
 import MaskedView from '@react-native-masked-view/masked-view';
 import LinearGradient from 'react-native-linear-gradient';
-const {height} = Dimensions.get('window');
 import person from '../../assets/profiles/66.jpg';
+import LottieView from 'lottie-react-native';
+
+const {height} = Dimensions.get('window');
 
 const CommentSection = () => {
   const [comments, setComments] =
@@ -38,7 +40,6 @@ const CommentSection = () => {
       },
     ]);
     setText('');
-    // list?.current?.scrollToIndex({animated: true, index: comments.length - 1});
   };
   useEffect(() => {
     list?.current?.scrollToIndex({animated: true, index: comments.length - 1});
@@ -69,6 +70,15 @@ const CommentSection = () => {
       </MaskedView>
 
       <View style={styles.footer}>
+        <View style={styles.lottieHolder}>
+          <LottieView
+            source={require('../../assets/likes.json')}
+            autoPlay
+            loop
+            style={{width: 70, height: 150}}
+          />
+        </View>
+
         <TextInput
           placeholder="Drop a comment"
           style={styles.input}
@@ -117,5 +127,11 @@ const styles = StyleSheet.create({
   flatlist: {
     marginBottom: 10,
     height: height / 2,
+    paddingTop: 100,
+  },
+  lottieHolder: {
+    position: 'absolute',
+    right: -10,
+    bottom: 40,
   },
 });
