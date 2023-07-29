@@ -9,6 +9,7 @@ import Heart from '../../../assets/heart.svg';
 import Message from '../../../assets/message.svg';
 import Download from '../../../assets/receivesquare.svg';
 import Share from '../../../assets/share-android-24.svg';
+import Bookmark from '../../../assets/bookmark.svg';
 
 const TrendingSection = () => {
   return (
@@ -43,6 +44,7 @@ const TrendingSection = () => {
         <Message />
         <Download />
         <Share />
+        <Bookmark />
       </View>
     </View>
   );
@@ -53,7 +55,6 @@ export default TrendingSection;
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
-    paddingBottom: 10,
   },
   sect: {
     flexDirection: 'row',

@@ -13,6 +13,7 @@ const Home = () => {
         ListHeaderComponent={FeedHeaderComponent}
         data={[]}
         renderItem={renderItem}
+        showsVerticalScrollIndicator={false}
       />
     </SafeAreaView>
   );

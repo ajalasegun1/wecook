@@ -5,6 +5,8 @@ import four from '../assets/profiles/29.jpg';
 import five from '../assets/profiles/3.jpg';
 import six from '../assets/profiles/30.jpg';
 import seven from '../assets/profiles/32.jpg';
+import p1 from '../assets/images/Frame.png';
+import p2 from '../assets/images/Frame1.png';
 export const COMMENTS: {img: any; username: string; comment: string}[] = [
   {
     img: one,
@@ -100,5 +102,29 @@ export const DISCOVER: DiscoverType[] = [
     age: '27',
     city: 'pakistan',
     img: five,
+  },
+];
+
+export type PreferenceType = {
+  name: string;
+  desc: string;
+  img: any;
+};
+
+export const PREFERENCES = [
+  {
+    name: 'Nini Cho',
+    desc: 'Chief chef, Nini pastries',
+    img: p1,
+  },
+  {
+    name: 'Usman Ali',
+    desc: 'Seus chef, Al-am eatry',
+    img: p2,
+  },
+  {
+    name: 'Abiya Stones',
+    desc: 'Head chef, Sweet cooks',
+    img: p1,
   },
 ];

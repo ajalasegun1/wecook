@@ -11,14 +11,16 @@ const VideoSect = () => {
   };
   const resetPaused = () => setPaused(true);
   const handleTouch = () => {
-    console.log('Touched');
     setTouched(true);
   };
 
   useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
     if (touched) {
-      setTimeout(() => setTouched(false), 2000);
+      timeout = setTimeout(() => setTouched(false), 2000);
     }
+
+    () => clearTimeout(timeout);
   }, [touched]);
   return (
     <Pressable style={styles.container} onPress={handleTouch}>
@@ -50,6 +52,7 @@ const styles = StyleSheet.create({
     height: 241,
     width: '100%',
     borderRadius: 8,
+    backgroundColor: '#000000',
   },
   overlay: {
     height: 241,

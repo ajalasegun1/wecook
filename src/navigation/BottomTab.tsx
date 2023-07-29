@@ -6,7 +6,6 @@ import MessageActive from '../assets/bottomTabIcons/messages1.svg';
 import MessageIcon from '../assets/bottomTabIcons/messages2.svg';
 import Bookmark from '..//assets/bottomTabIcons/archive.svg';
 import Profile from '../assets/bottomTabIcons/profile.svg';
-import AddCircle from '../assets/bottomTabIcons/addcircle.svg';
 import {neutal, primary} from '../theme/colors';
 import ChatStack from './ChatsStack/ChatStack';
 import ExploreIcon from '../components/ExploreIcon/ExploreIcon';
@@ -15,7 +14,8 @@ const Tab = createBottomTabNavigator();
 
 const BottomTab = () => {
   return (
-    <Tab.Navigator screenOptions={{headerShown: false}}>
+    <Tab.Navigator
+      screenOptions={{headerShown: false, tabBarHideOnKeyboard: true}}>
       <Tab.Screen
         name="HomeTab"
         component={Home}
