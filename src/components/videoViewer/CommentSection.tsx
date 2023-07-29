@@ -7,7 +7,7 @@ import {
   ListRenderItem,
   Dimensions,
 } from 'react-native';
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {neutal, primary} from '../../theme/colors';
 import SendIcon from '../../assets/send.svg';
 import {COMMENTS} from '../../constants';
@@ -38,8 +38,11 @@ const CommentSection = () => {
       },
     ]);
     setText('');
-    list?.current?.scrollToIndex({animated: true, index: comments.length - 1});
+    // list?.current?.scrollToIndex({animated: true, index: comments.length - 1});
   };
+  useEffect(() => {
+    list?.current?.scrollToIndex({animated: true, index: comments.length - 1});
+  }, [comments]);
   return (
     <View style={styles.container}>
       <MaskedView
@@ -56,6 +59,12 @@ const CommentSection = () => {
           renderItem={renderItem}
           style={styles.flatlist}
           showsVerticalScrollIndicator={false}
+          onScrollToIndexFailed={info => {
+            const wait = new Promise(resolve => setTimeout(resolve, 700));
+            wait.then(() => {
+              list.current?.scrollToIndex({animated: true, index: info.index});
+            });
+          }}
         />
       </MaskedView>
 
