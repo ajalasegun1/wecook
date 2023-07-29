@@ -67,3 +67,38 @@ export const COMMENTS: {img: any; username: string; comment: string}[] = [
     comment: 'shayo',
   },
 ];
+
+export type DiscoverType = {name: string; age: string; city: string; img: any};
+
+export const DISCOVER: DiscoverType[] = [
+  {
+    name: 'Sammy Zayn',
+    age: '22',
+    city: 'southampton',
+    img: one,
+  },
+  {
+    name: 'Clara Simps',
+    age: '25',
+    city: 'london',
+    img: two,
+  },
+  {
+    name: 'Joshzy',
+    age: '19',
+    city: 'florida',
+    img: three,
+  },
+  {
+    name: 'Aryan',
+    age: '21',
+    city: 'san diego',
+    img: four,
+  },
+  {
+    name: 'Samantha',
+    age: '27',
+    city: 'pakistan',
+    img: five,
+  },
+];
