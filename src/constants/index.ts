@@ -154,3 +154,65 @@ export const LIVEUSERS: LiveType[] = [
     img: l1,
   },
 ];
+
+export type Detail = 'delivered' | 'read' | 'new';
+
+export type ChatListType = {
+  username: string;
+  message: string;
+  time: string;
+  img: any;
+  detail: Detail;
+};
+
+export const CHATLIST: ChatListType[] = [
+  {
+    username: 'Lagatha_24',
+    message: "Yea, I'll be free by 3.",
+    time: '05:51 am',
+    img: one,
+    detail: 'new',
+  },
+  {
+    username: 'Warri71',
+    message: 'Where my money?',
+    time: '05:51 am',
+    img: two,
+    detail: 'delivered',
+  },
+  {
+    username: 'Bubu12',
+    message: 'How you de?',
+    time: '05:51 am',
+    img: three,
+    detail: 'read',
+  },
+  {
+    username: 'Love22',
+    message: 'Boss needs to speak with you',
+    time: '05:51 am',
+    img: four,
+    detail: 'delivered',
+  },
+  {
+    username: 'Cap112',
+    message: 'Wash your clothes',
+    time: '05:51 am',
+    img: five,
+    detail: 'new',
+  },
+  {
+    username: 'Teaser12',
+    message: 'Remember to come home early',
+    time: '05:51 am',
+    img: six,
+    detail: 'delivered',
+  },
+  {
+    username: 'Lookman98',
+    message: 'TerryG is good',
+    time: '05:51 am',
+    img: seven,
+    detail: 'read',
+  },
+];

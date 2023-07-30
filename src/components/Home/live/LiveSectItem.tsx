@@ -41,7 +41,6 @@ export default LiveSectItem;
 const styles = StyleSheet.create({
   card: {
     width: 264,
-    // height: 356,
     backgroundColor: '#fff',
     marginRight: 20,
     shadowColor: '#000',
@@ -55,10 +54,8 @@ const styles = StyleSheet.create({
     elevation: 8,
   },
   head: {
-    // paddingHorizontal: ,
     flexDirection: 'row',
     gap: 10,
-    // backgroundColor: 'red',
     padding: 10,
   },
   username: {
@@ -72,7 +69,6 @@ const styles = StyleSheet.create({
   img: {
     height: 160,
     width: '100%',
-    // resizeMode: 'contain',
   },
   footer: {
     paddingHorizontal: 10,

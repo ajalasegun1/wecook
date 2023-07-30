@@ -1,4 +1,4 @@
-import {FlatList, ListRenderItem, StyleSheet, Text, View} from 'react-native';
+import {FlatList, ListRenderItem, StyleSheet, View} from 'react-native';
 import React from 'react';
 import SectHeader from '../SectHeader';
 import {LIVEUSERS, LiveType} from '../../../constants';
@@ -17,6 +17,7 @@ const LiveSection = () => {
         data={LIVEUSERS}
         renderItem={renderItem}
         horizontal
+        keyExtractor={(_, index) => index.toString()}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{paddingLeft: 20, paddingBottom: 20}}
       />

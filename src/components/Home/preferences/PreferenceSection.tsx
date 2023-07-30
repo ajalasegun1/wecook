@@ -16,6 +16,7 @@ const PreferenceSection = () => {
       <FlatList
         data={PREFERENCES}
         renderItem={renderItem}
+        keyExtractor={(_, index) => index.toString()}
         horizontal
         showsHorizontalScrollIndicator={false}
         style={styles.flat}
