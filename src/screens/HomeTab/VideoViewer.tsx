@@ -1,28 +1,21 @@
-import {
-  Dimensions,
-  KeyboardAvoidingView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-import React from 'react';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import {Dimensions, KeyboardAvoidingView, StyleSheet, View} from 'react-native';
+import React, {useState} from 'react';
 import {primary} from '../../theme/colors';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Video from 'react-native-video';
-import bunny from '../../assets/videos/bunny.mp4';
 import NavSect from '../../components/videoViewer/NavSect';
 import CommentSection from '../../components/videoViewer/CommentSection';
+import {useIsFocused} from '@react-navigation/native';
 // https://picsum.photos/200
 // https://xsgames.co/randomusers/avatar.php?g=male
 // https://xsgames.co/randomusers/avatar.php?g=female
 const {width, height} = Dimensions.get('window');
 const VideoViewer = () => {
-  const {top} = useSafeAreaInsets();
+  const isFocused = useIsFocused();
+  const [paused] = useState(isFocused ? false : true);
   return (
     <View style={[styles.container]}>
       <Video
+        paused={paused}
         source={require('../../assets/videos/bunny.mp4')}
         style={styles.videoPlayer}
         resizeMode="cover"

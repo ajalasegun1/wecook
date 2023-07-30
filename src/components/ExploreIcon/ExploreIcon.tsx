@@ -68,8 +68,11 @@ const ExploreIcon = () => {
     };
   });
   const onPress = () => {
-    console.log('pressed');
     setPressed(val => !val);
+  };
+  const goToViewer = () => {
+    setPressed(val => !val);
+    navigation.navigate('VideoViewer');
   };
 
   return (
@@ -93,9 +96,7 @@ const ExploreIcon = () => {
           </TouchableOpacity>
         </Animated.View>
         <Animated.View style={[styles.reel, reelStyle]}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('VideoViewer')}
-            style={styles.iconContainer}>
+          <TouchableOpacity onPress={goToViewer} style={styles.iconContainer}>
             <MaterialCommunityIcons
               name="movie-open-play"
               size={30}

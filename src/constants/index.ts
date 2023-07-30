@@ -216,3 +216,54 @@ export const CHATLIST: ChatListType[] = [
     detail: 'read',
   },
 ];
+
+export enum MessageStatus {
+  delivered = 'delivered',
+  read = 'read',
+}
+
+export type MessageType = {
+  message: string;
+  time: string;
+  status: 'delivered' | 'read';
+  isSender: boolean;
+};
+
+export const MESSAGES: MessageType[] = [
+  {
+    message: 'Good content buddy!🙌🏾🙌🏾🙌🏾',
+    time: '7:23 am',
+    status: 'read',
+    isSender: false,
+  },
+  {
+    message: 'Keep it up! 💪🏾',
+    time: '7:25 am',
+    status: 'read',
+    isSender: false,
+  },
+  {
+    message: 'Hello',
+    time: '7:26 am',
+    status: 'read',
+    isSender: true,
+  },
+  {
+    message: 'Thanks😊',
+    time: '7:26 am',
+    status: 'read',
+    isSender: true,
+  },
+  {
+    message: 'I came up with a new recipe',
+    time: '7:40 am',
+    status: 'read',
+    isSender: false,
+  },
+  {
+    message: "That is awesome. Let's see it",
+    time: '7:41 am',
+    status: 'read',
+    isSender: true,
+  },
+];

@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   flatlist: {
     marginBottom: 10,
     height: height / 2,
-    paddingTop: 100,
+    // paddingTop: 100,
   },
   lottieHolder: {
     position: 'absolute',

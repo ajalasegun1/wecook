@@ -15,6 +15,7 @@ const ChatRoomHeader = () => {
       <TouchableOpacity style={styles.btn}>
         <Text style={styles.pri}>View profile</Text>
       </TouchableOpacity>
+      <Text style={styles.small}>Today</Text>
     </View>
   );
 };
@@ -49,6 +50,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 8,
     backgroundColor: primary.p50,
+    marginBottom: 20,
   },
   pri: {
     fontWeight: '500',
