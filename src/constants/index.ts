@@ -7,6 +7,7 @@ import six from '../assets/profiles/30.jpg';
 import seven from '../assets/profiles/32.jpg';
 import p1 from '../assets/images/Frame.png';
 import p2 from '../assets/images/Frame1.png';
+import l1 from '../assets/images/Frame2.png';
 export const COMMENTS: {img: any; username: string; comment: string}[] = [
   {
     img: one,
@@ -126,5 +127,30 @@ export const PREFERENCES = [
     name: 'Abiya Stones',
     desc: 'Head chef, Sweet cooks',
     img: p1,
+  },
+];
+
+export type LiveType = {
+  username: string;
+  city: string;
+  title: string;
+  desc: string;
+  img: any;
+};
+
+export const LIVEUSERS: LiveType[] = [
+  {
+    username: 'Freddy_cooker',
+    city: 'Florida',
+    title: 'Outdoor cooks',
+    desc: 'I’ll be showing how I prepare outdoor meals at home with my friends.',
+    img: l1,
+  },
+  {
+    username: "Lilly 'n' Tina",
+    city: 'Texas',
+    title: 'Veggies fries',
+    desc: 'Lilly and Tina shows us a secret recipe on fried veggies',
+    img: l1,
   },
 ];

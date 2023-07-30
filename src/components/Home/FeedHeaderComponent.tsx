@@ -3,6 +3,7 @@ import React from 'react';
 import DiscoverSection from './DiscoverSection';
 import TrendingSection from './trending/TrendingSection';
 import PreferenceSection from './preferences/PreferenceSection';
+import LiveSection from './live/LiveSection';
 
 const FeedHeaderComponent = () => {
   return (
@@ -10,6 +11,7 @@ const FeedHeaderComponent = () => {
       <DiscoverSection />
       <TrendingSection />
       <PreferenceSection />
+      <LiveSection />
     </View>
   );
 };

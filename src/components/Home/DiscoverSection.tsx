@@ -23,6 +23,7 @@ const DiscoverSection = () => {
         showsHorizontalScrollIndicator={false}
         keyExtractor={(_, index) => index.toString()}
         style={styles.list}
+        contentContainerStyle={{paddingLeft: 20}}
       />
     </View>
   );
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   list: {
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
   },
   disc: {
     fontWeight: '500',

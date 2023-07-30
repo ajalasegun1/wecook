@@ -1,14 +1,34 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {FlatList, ListRenderItem, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import SectHeader from '../SectHeader';
+import {LIVEUSERS, LiveType} from '../../../constants';
+import LiveSectItem from './LiveSectItem';
 
 const LiveSection = () => {
+  const renderItem: ListRenderItem<LiveType> = ({item}) => (
+    <LiveSectItem data={item} />
+  );
   return (
     <View>
-      <Text>LiveSection</Text>
+      <View style={styles.top}>
+        <SectHeader title="Currently live" />
+      </View>
+      <FlatList
+        data={LIVEUSERS}
+        renderItem={renderItem}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{paddingLeft: 20, paddingBottom: 20}}
+      />
     </View>
   );
 };
 
 export default LiveSection;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  top: {
+    paddingHorizontal: 20,
+    paddingBottom: 15,
+  },
+});

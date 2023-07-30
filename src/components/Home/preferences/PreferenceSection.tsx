@@ -9,7 +9,7 @@ const PreferenceSection = () => {
     <PreferenceItem data={item} />
   );
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.top}>
         <SectHeader title="Based on your preference" />
       </View>
@@ -19,6 +19,7 @@ const PreferenceSection = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
         style={styles.flat}
+        contentContainerStyle={{paddingBottom: 10, paddingLeft: 20}}
       />
     </View>
   );
@@ -27,11 +28,14 @@ const PreferenceSection = () => {
 export default PreferenceSection;
 
 const styles = StyleSheet.create({
+  container: {
+    paddingBottom: 5,
+  },
   top: {
     paddingHorizontal: 20,
     paddingBottom: 15,
   },
   flat: {
-    paddingLeft: 20,
+    // paddingLeft: 20,
   },
 });
